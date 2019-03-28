@@ -1,38 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title>Online Address Book</title>
+
+    <title>Online Address book</title>
   </head>
   <body>
-    <h1>Online Address Book</h1>
-    <h2>Add a Contact</h2>
+    <div class="container">
+      <h1>Online Address book</h1>
 
-    <form>
+      <div class="row">
+          <div class="location">
+              <h2>Add a contact:</h2>
+              <form id="new-contact">
+                  <div class="form-group">
+                      <label for="new-first-name">First name</label>
+                      <input type="text" class="form-control" id="new-first-name">
+                  </div>
+                  <div class="form-group">
+                      <label for="new-last-name">Last name</label>
+                      <input type="text" class="form-control" id="new-last-name">
+                  </div>
+                  <div class="form-group">
+                      <label for="phon-number">Phone Number</label>
+                      <input type="number" class="form-control" id="phon-number">
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" class="form-control" id="email">
+                  </div>
 
-      <label for="fname">First Name:</label>
-      <input type="text" name="fname" value=""><br><br>
-      <label for="sname">Second Name:</label>
-      <input type="text" name="sname" value=""><br><br>
-      <label for="phonenumber">Phone Number</label>
-      <input type="number" name="num" value=""><br><br>
+                  <div id="new-addresses">
 
-      <address class="">
-        <label for="street">Street:</label>
-        <input type="text" name="street" value=""><br><br>
-        <label for="city">City:</label>
-        <input type="text" name="city" value=""><br><br>
-        <label for="state">State:</label>
-        <input type="text" name="state" value=""><br><br>
-      </address>
-
-      <button type="submit" name="button">Submit</button>
-
-
+                      <div class="address">
+                          <div class="form-group">
+                              <label for="new-street">Street</label>
+                              <input type="text" class="form-control new-street">
+                          </div>
+                          <div class="form-group">
+                              <label for="new-city">City</label>
+                              <input type="text" class="form-control new-city">
+                          </div>
+                          <div class="form-group">
+                              <label for="new-state">State</label>
+                              <input type="text" class="form-control new-state">
+                          </div>
+                      </div>
+                  </div>
 
 
+                  <button type="submit" class="btn">Submit</button>
 
-    </form>
 
+              </form>
+
+          </div>
+
+
+      </div>
+    </div>
   </body>
 </html>
