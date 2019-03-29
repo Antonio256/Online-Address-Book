@@ -21,8 +21,10 @@ $(document).ready(function() {
 
         var inputtedFirstName = $("input#new-first-name").val();
         var inputtedLastName = $("input#new-last-name").val();
+        var inputtedPhoneNumber = $("input#phon-number").val();
+        var inputtedEmail = $("input#email").val();
 
-        var newContact = { firstName: inputtedFirstName, lastName: inputtedLastName, addresses:  [] };
+        var newContact = { firstName: inputtedFirstName, lastName: inputtedLastName,phoneNumber: inputtedPhoneNumber, email: inputtedEmail, addresses:  [] };
 
         $(".address").each(function() {
             var inputtedStreet = $(this).find("input.new-street").val();
@@ -39,11 +41,13 @@ $(document).ready(function() {
 
         $("input#new-first-name").val("");
         $("input#new-last-name").val("");
+        $("input#phon-number").val("");
+        $("input#email").val("");
         $("input.new-street").val("");
         $("input.new-city").val("");
         $("input.new-state").val("");
 
-        // $(".new-address").css("background-color", "red");
+
         $(".new-address").remove();
 
         $(".contact").last().click(function() {
@@ -51,6 +55,8 @@ $(document).ready(function() {
             $("#show-contact h2").text(newContact.firstName);
             $(".first-name").text(newContact.firstName);
             $(".last-name").text(newContact.lastName);
+            $(".phon-number").text(newContact.phoneNumber);
+            $(".email").text(newContact.email);
 
         $("ul#addresses").text("");
         newContact.addresses.forEach(function(address) {
